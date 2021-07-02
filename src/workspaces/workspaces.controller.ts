@@ -15,7 +15,7 @@ export class WorkspacesController {
   inviteMembersToWorkspace() {}
 
   @Delete(':url/members/:id')
-  getMemberInfoInWorkspace() {}
+  deleteMemberInfoInWorkspace() {}
 
   @Get(':url/users/:id')
   getMemberInfoInWorkspace() {}
