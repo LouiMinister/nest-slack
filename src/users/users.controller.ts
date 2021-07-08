@@ -31,9 +31,8 @@ export class UsersController {
 
   @ApiOperation({ summary: '회원가입' })
   @Post()
-  postUsers(@Body() data: JoinRequestDto) {
-    this.usersService.postUsers(data.email, data.nickname, data.password);
-    return;
+  async join(@Body() data: JoinRequestDto) {
+    await this.usersService.postUsers(data.email, data.nickname, data.password);
   }
 
   @ApiOperation({ summary: '로그인' })
